@@ -17,6 +17,7 @@ class Game extends Component{
     score:0,
     
     inc:0,
+    prev_id:0,
     
   }
 
@@ -38,8 +39,8 @@ class Game extends Component{
   
 
   clickEachItem=(id,number)=>{
-    const {main,inc}=this.state
-    this.setState({main:main+1,inc:inc+1})
+    const {inc}=this.state
+    this.setState({inc:inc+1})
     let plus=0
     
     
@@ -55,27 +56,34 @@ class Game extends Component{
         return each
       })
       }) ,)
-      const {count,score}=this.state
-      if(count===0){
+      const {count,prev_id,score}=this.state
+      if(count===0 && prev_id===0){
         this.setState({count:number})
+        this.setState({prev_id:id})
       }
       else if(count!==0) {
-        if(count===number){
+        if(prev_id===id){
+          console.log("same")
+        
+
+        }
+        else if (count===number) {
           if(inc===31){
             plus=1
           }
           this.setState({score:score+1})
-          this.setState({count:0})
+          this.setState({count:0,prev_id:0})
+          
           
         }
         else if (count!==number  && score!==0){
           this.setState({score:score-1})
-          this.setState({count:0})
+          this.setState({count:0,prev_id:0})
           
           
         }
         else if(count!==number && score===0){
-          this.setState({count:0})
+          this.setState({count:0,prev_id:0})
 
         }
         
@@ -157,7 +165,7 @@ class Game extends Component{
             {this.mainGameList()}
           
           </div>
-          <button className="btn" onClick={this.onClickBtn}>Game Over</button>
+          <button className="btn" type="button" onClick={this.onClickBtn}>Game Over</button>
           
 
 

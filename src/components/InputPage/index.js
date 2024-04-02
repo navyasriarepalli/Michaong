@@ -20,10 +20,17 @@ class InputPage extends Component {
     
     event.preventDefault()
     const { playerName } = this.state;
-    Cookies.set("name", playerName);
-    console.log(playerName);
-    const {history}=this.props
-    history.push('/game')
+    
+    if(playerName===""){
+      alert("Please Enter your Name")
+    }
+    else{
+      Cookies.set("name", playerName);
+      console.log(playerName);
+      const {history}=this.props
+      history.push('/game')
+
+    }
 
     
     
@@ -64,7 +71,7 @@ class InputPage extends Component {
           <h1 className="main-head">Enter Your Name</h1>
           <form onSubmit={this.onSubmitForm}>
           <div>{this.renderInput()}</div>
-            <button type="submit" className="btn">Play
+            <button type="submit" className="input-btn">Play
                 
             </button>
           </form>

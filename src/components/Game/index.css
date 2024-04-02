@@ -3,6 +3,7 @@
     text-align:center;
     font-size:30px;
     font-weight: bold;
+    font-family: "Bree Serif";
   }
   .mini-main-cont{
   
@@ -67,13 +68,15 @@
     color:white;
     text-decoration: none;
   }
+
   @media screen and (max-width:600px){
     .game-para{
       text-align: center;
       margin-top: 10px;
     }
     .btn{
-      font-size: 10px;
+      font-size: 13px;
+      width: 65vw;
     }
     
   }

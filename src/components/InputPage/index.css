@@ -1,50 +1,60 @@
 .main-cont{
-    text-align:center;
-    margin-top: 15px;
-  }
-  .main-head{
-    text-decoration:underline;
-  }
-  .mini-main-cont{
-    border:2px;
-    border-style:solid;
-    border-color:black;
-    margin-left:2vw;
-    margin-right:2vw;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    padding:5%;
-  }
-  .input-cont{
-    height:7vh;
-    width:35vw;
-    margin-bottom:3%;
-    border-radius:10px;
-    border-color:black;
-    margin-top:2%;
-    padding-left:5%;
-    font-size:16px;
-    margin-bottom:7%;
-    background-color:white;
-    
+  text-align:center;
+  margin-top: 15px;
+}
+.main-head{
+  text-decoration:underline;
+  font-family: "Bree Serif";
+}
+.mini-main-cont{
+  border:2px;
+  border-style:solid;
+  border-color:black;
+  margin-left:2vw;
+  margin-right:2vw;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:5%;
+}
+.input-cont{
+  height:7vh;
+  width:35vw;
+  margin-bottom:3%;
+  border-radius:10px;
+  border-color:black;
+  margin-top:2%;
+  padding-left:5%;
+  font-size:16px;
+  margin-bottom:7%;
+  background-color:white;
   
-    
+
+  
+}
+.input-btn{
+  height:7vh;
+  width:20vw;
+  color:white;
+  background-color:#0040ff;
+  font-size:18px;
+  border-color:#0040ff;
+  border-radius:10px;
+  
+  
+}
+.link{
+  font-size: 20px;
+  color:white;
+  text-decoration: none;
+}
+
+@media screen and (max-width:600px){
+  .input-cont{
+    width: 80vw;
   }
-  .btn{
-    height:7vh;
-    width:20vw;
-    color:white;
-    background-color:#0040ff;
-    font-size:18px;
-    border-color:#0040ff;
-    border-radius:10px;
-    
-    
+  .input-btn{
+    width: 75vw;
   }
-  .link{
-    font-size: 20px;
-    color:white;
-    text-decoration: none;
-  }
+}

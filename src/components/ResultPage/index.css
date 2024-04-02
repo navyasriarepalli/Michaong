@@ -1,10 +1,11 @@
 .main-cont{
     text-align:center;
-    font-family: "Sans-Serif";
+    font-family: "Roboto";
   }
   .main-head{
     text-decoration:underline;
     font-size: 30px;
+    font-family: "Bree Serif";
   }
   .mini-main-cont{
     
@@ -49,6 +50,33 @@
 
     @media screen and (max-width:600px){
       .coloring{
+        font-size: 17px;
+      }
+      .spanT{
+        font-size: 18px;
+      }
+      .para{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 15px;
+      }
+    }
+
+    @media screen and (min-width:601px){
+      .spanT{
+        font-size: 20px;
+      }
+      .coloring{
+        font-size: 20px;
+      }
+
+    }
+
+    @media screen and (min-width:1001px){
+      .coloring{
         font-size: 23px;
+      }
+      .spanT{
+        font-size: 25px;
       }
     }
