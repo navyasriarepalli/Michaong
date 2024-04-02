@@ -6,8 +6,10 @@ class ResultPage extends Component {
   
   
   render() {
+    
     const player=Cookies.get('name')
-    const scoring=Cookies.get('score')
+    let scoring=0
+    scoring=Cookies.get('Score')
     const timeing=Cookies.get('time')
     let min=0
     let se=timeing

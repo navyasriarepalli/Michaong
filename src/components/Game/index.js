@@ -1,6 +1,5 @@
 
 import {Component} from 'react'
-
 import {Redirect} from 'react-router-dom'
 import Cookies from "js-cookie";
 import Each from '../Each'
@@ -41,6 +40,8 @@ class Game extends Component{
   clickEachItem=(id,number)=>{
     const {main,inc}=this.state
     this.setState({main:main+1,inc:inc+1})
+    let plus=0
+    
     
     this.setState(prevState => ({
       number_list: prevState.number_list.map(each=> {
@@ -54,34 +55,42 @@ class Game extends Component{
         return each
       })
       }) ,)
-    const {count,score}=this.state
-    if(count===0){
-      this.setState({count:number})
-    }
-    else if(count!==0) {
-      if(count===number){
-        this.setState({score:score+1})
-        this.setState({count:0})
+      const {count,score}=this.state
+      if(count===0){
+        this.setState({count:number})
       }
-      else if (count!==number  && score!==0){
-        this.setState({score:score-1})
-        this.setState({count:0})
+      else if(count!==0) {
+        if(count===number){
+          if(inc===31){
+            plus=1
+          }
+          this.setState({score:score+1})
+          this.setState({count:0})
+          
+        }
+        else if (count!==number  && score!==0){
+          this.setState({score:score-1})
+          this.setState({count:0})
+          
+          
+        }
+        else if(count!==number && score===0){
+          this.setState({count:0})
+
+        }
         
-      }
-      
+        
       
     }
+    
     if(inc===31){
+      const{time}=this.state
+      
       this.componentWillUnmount()
+      Cookies.set('Score',score+plus)
+      Cookies.set('time',time)
     }
-    
-    
-
-
-    
-
-  
-    
+   
     
   }
 
@@ -114,7 +123,7 @@ class Game extends Component{
   onClickBtn=event=>{
     const {score,time}=this.state 
 
-    Cookies.set('score',score)
+    Cookies.set('Score',score)
     Cookies.set('time',time)
 
     const {history}=this.props
@@ -127,9 +136,11 @@ class Game extends Component{
   render(){
     const {time,score,inc}=this.state
     let Name=Cookies.get('name')
+    console.log(score)
     if( inc===31 ){
       
         <Redirect to="/result"/>
+        
         
       }
     
