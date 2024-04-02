@@ -1,3 +1,4 @@
+
 import {Component} from 'react'
 
 import {Redirect} from 'react-router-dom'
@@ -131,16 +132,6 @@ class Game extends Component{
         <Redirect to="/result"/>
         
       }
-      
-    
-    
-
-  
-    
-
-    
-    
-    
     
     return(
       <div className="main-cont">

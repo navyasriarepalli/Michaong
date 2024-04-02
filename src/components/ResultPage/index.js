@@ -9,7 +9,7 @@ class ResultPage extends Component {
     const player=Cookies.get('name')
     const scoring=Cookies.get('score')
     const timeing=Cookies.get('time')
-    let min=""
+    let min=0
     let se=timeing
     if(timeing<=60){
       min=0
