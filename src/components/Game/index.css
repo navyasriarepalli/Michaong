@@ -1,0 +1,79 @@
+.main-head{
+    text-decoration:underline;
+    text-align:center;
+    font-size:30px;
+    font-weight: bold;
+  }
+  .mini-main-cont{
+  
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+  
+  }
+  .mini-cont-first{
+    border:2px;
+    border-style:solid;
+    border-color:black;
+    margin-left:4vw;
+    margin-right:4vw;
+    padding-bottom:5%;
+  
+  }
+  .naming{
+    font-size: 20px;
+  }
+  .game-para{
+    text-align:right;
+    padding-top:0px;
+    margin-top:5px;
+    margin-right:7px;
+    text-decoration:underline;
+    font-size:20px;
+    font-weight:bold;
+    font-style:italic;
+    font-weight: "Roboto";
+  
+  }
+  .btn{
+    height:7vh;
+    width:18vw;
+    color:white;
+    background-color:#0040ff;
+    font-size:18px;
+    border-color:#0040ff;
+    border-radius:3px;
+    margin-top:20px;
+    margin-bottom: 3px;
+    
+  }
+  .space{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    margin-left:2vw;
+    margin-right:2vw;
+  }
+  .list-items{
+    list-style-type:none;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+  
+  }
+  .link{
+    font-size: 10%;
+    color:white;
+    text-decoration: none;
+  }
+  @media screen and (max-width:600px){
+    .game-para{
+      text-align: center;
+      margin-top: 10px;
+    }
+    .btn{
+      font-size: 10px;
+    }
+    
+  }
